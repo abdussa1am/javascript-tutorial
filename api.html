@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getLocation()">Get location</button>
+<p id="demo"></p>
+<p id="htm"></p>
+<button onclick="myFunction()">Go Back</button>
+</body>
+
+</html>
+<script>
+    x = document.getElementById("demo")
+   function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+  
+} 
+localStorage.setItem('myCat', 'Tom');
+ y = localStorage.getItem("myCat")
+ document.getElementById("htm").innerHTML = y
+
+
+
+ 
+
+
+function myFunction() {
+  window.history.back();
+}
+fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/')
+  .then(response => response.json())
+  .then(commits => alert(commits[0].author.login));
+</script>
