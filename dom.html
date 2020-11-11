@@ -14,7 +14,13 @@
 <button id="myBtn">Try it</button>
 <p id="demo" class="example"></p>
 
-
+<ul>
+    <li>fgsd</li>
+    <li>sdfs</li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 
 
 <button onclick="removeFunction()">Remove Input field</button>
@@ -27,6 +33,16 @@
 
 </html>
 <script>
+var liElements = document.getElementsByTagName("LI");
+ 
+var howManyLi = liElements.length;
+var liElements
+for (var i = 0; i < howManyLi; i++) { 
+    if (liElements[i].innerHTML === "") {
+        liElements[i].innerHTML = "coming soon";
+        } 
+    }
+ 
 function val(){
 var name = document.getElementById("value").value;
 console.log(name)
