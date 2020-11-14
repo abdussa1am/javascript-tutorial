@@ -14,7 +14,37 @@
 
 </html>
 <script>
-    x = document.getElementById("demo")
+
+
+request.onupgradeneeded = function(event) {
+  var db = event.target.result;
+
+  // Create an objectStore to hold information about our customers. We're
+  // going to use "ssn" as our key path because it's guaranteed to be
+  // unique - or at least that's what I was told during the kickoff meeting.
+  var objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
+
+  // Create an index to search customers by name. We may have duplicates
+  // so we can't use a unique index.
+  objectStore.createIndex("name", "name", { unique: false });
+
+  // Create an index to search customers by email. We want to ensure that
+  // no two customers have the same email, so use a unique index.
+  objectStore.createIndex("email", "email", { unique: true });
+
+};
+request.onsuccess = function(event){
+  var empoloyeeData = [
+  {name: "sasa", email:"as@gmail.com"},
+  {name: "ads", email:"s2@gmail.com"},
+  {name: "sads", email:"a2@gmail.com"},
+  ];
+  for (i in empoloyeeData){
+    objectStore.put(empoloyeeData[i]);
+    alert("record added")
+}
+}
+ /*   x = document.getElementById("demo")
    function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -43,4 +73,7 @@ function myFunction() {
 fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/')
   .then(response => response.json())
   .then(commits => alert(commits[0].author.login));
+  */
+ 
+  
 </script>
