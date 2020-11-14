@@ -6,12 +6,66 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="getLocation()">Try It</button>
+<style>
+    h1{
+        background-color: blue;
+    }
+</style>
  <h1 id="demo"></p>
-     
-    <script>
- 
-       /* var num = 1
+    <H1>ASDASDSA</H1>
+    <input type="text" name="as" id="asd" size="20" maxlength="20" required="true" autofocus/>
+    <input type="email" placeholder="abc@gmail.com">
+    <input type="url">
+    <input type="tel" pattern="[+0-9]{2}" title="format: +92">
+    <input type="num" min="5" max="15">
+    <input type="range">
+    <input type="date">
+    <input type="color">
+    <progress value="35" max="100"></progress>
+
+    <canvas id="mCanvas" height="700" , width="700"></canvas>
+   
+
+    <p>Drag the W3Schools image into the rectangle:</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1" src="download.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<embed src="https://media.gettyimages.com/photos/mausoleum-of-pakistans-founder-mohammad-ali-jinnah-picture-id157611973?s=612x612">
+
+<script>
+
+/*window.onload = function(){  
+        var canvas = document.getElementById("mCanvas");
+        var ctext = canvas.getContext('2d');
+        ctext.beginPath();
+        ctext.moveTo(400,400);
+        ctext.lineTo(800,200);
+        ctext.lineWidth = 5;
+        ctext.fillStyle = "green";
+        ctext.fill();
+        ctext.strokeStyle = "blue";
+        ctext.stroke();
+}
+       
+ var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(85,50,40,20,2*Math.PI);
+    ctx.stroke();
+
+
+
+      window.onload = function(){  
+        var canvas = document.getElementById("mCanvas");
+        var ctext = canvas.getContext('2d');
+        ctext.beginPath();
+        ctext.rect(18,50,200,100);
+        ctext.fillstyle = 'Blue';
+        ctext.fill(); 
+        }
+        var num = 1
+}
         var newnum = num++
         console.log(newnum)
         console.log(num)
@@ -100,9 +154,68 @@ else{
     alert("Your city is not cleanest cities");
 }
 
+
+var x1 = new Object();    // A new Object object
+var x2 = new String();    // A new String object
+var x3 = new Number();    // A new Number object
+var x4 = new Boolean();   // A new Boolean object
+var x5 = new Array();     //
+person = {
+    firstname : "hamza",
+    rollno: "1213",
+    lastname: "ali",
+    fullname: function(){
+        return this.firstname +  " " + this.lastname;
+}
+}
+console.log(person.fullname())
+
+function Employee_info(name, age, experience){
+    this.name = name; 
+    this.age = age;
+    this.experience = experience;
+}
+Employee_info.prototype.nationality = "English";
+emp = new Employee_info('amry', '34', '5 years')
+console.log(emp['name'])
+
+var person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+delete person.age; 
+for (j in emp){
+    console.log(emp[j])
+}
+var rightNow = new Date();
+var theDay = rightNow.getDay();
+var theMonth = rightNow.getMonth();
+var theDay = rightNow.getDay();
+console.log(theMonth)
+
 */
 
+var products = new Array(2)
+products[0] = new Array('monitor' , '234')
+products[1] = new Array('cpu' , '584')
 
+
+prices = [['monitor' , '3432'],['cpu','342',"2"]]
+console.log(prices[0][0])
+console.log(prices[0][1])
+console.log(prices[1][0])
+console.log(prices[1][1])
+console.log(prices.length)
+var i
+
+for(i=0 ; i<prices.length ; i++){
+   
+    for(j=0 ; j<prices[i].length ; j++){
+        console.log(prices[i][j])
+        
+    }
+}
 
     </script>
 </body>
