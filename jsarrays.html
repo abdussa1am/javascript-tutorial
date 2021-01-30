@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p class="banana"></p>
+    <h1 class="frt"></h1>
+</body>
+<script>
+    var cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("demo").innerText = cars[0];
+
+//    first element
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var first = fruits[0];
+
+// last element
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var first = fruits[fruits.length - 1];
+    //console.log(first)
+// adding element
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.push("Lemon");
+    //console.log(fruits)
+// var fruits, text, fLen, i;
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits[6] = "Lemon";
+	
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.pop();
+    
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.shift(); 
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.unshift("Lemon");
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    delete fruits[0];   
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.sort();
+
+    var myGirls = ["Cecilie", "Lone"];
+    var myBoys = ["Emil", "Tobias", "Linus"];
+    var myChildren = myGirls.concat(myBoys);
+
+	document.getElementById("demo").innerHTML = fruits;
+	document.write("<h1>"+ fruits+"</h1>")
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+</head>
+<body>
+ 
+    <h1 id="demo"></h1>
+    <script>
+        var a = "Karachi is the largest city";     // Karachi is the "largest" city in the World
+        
+        var alength = a.indexOf("the");
+        var asubstring = a.substring(3,10);
+        var b= a.slice(4,20);
+
+
+        var upp = a.toUpperCase();
+        var low = a.toLowerCase();
+        var rplace = a.replace("largest" , "biggest");
+        document.getElementById("demo").innerText = alength;
+        document.getElementById("demo").innerText = asubstring;
+        document.getElementById("demo").innerText = rplace;
+
+        
+
+  //  document.getElementById("demo").innerText = Date();
+    
+
+
+    </script>
+    
+</body>
+</html>
